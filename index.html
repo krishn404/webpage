@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/acps/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #4CAF50;
+        }
+    </style>
+
+    <script>
+        // Function to show the selected section
+        function showSection(sectionId) {
+            var sections = document.getElementsByTagName('section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+    <ul>
+        <li><a class="active" href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        <li><a href="#" onclick="showSection('information')">Information</a></li>
+        <li><a href="#" onclick="showSection('guide')">Guide</a></li>
+    </ul>
+
+    <section id="home" class="hero is-light is-fullheight is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <img src="assets/img/image1.png" alt="Roger Stach" id="profile-img">
+                <h1 class="title">
+                    krishn404
+                </h1>
+                <span id="desperate"></span>
+                <h2 class="subtitle">
+                    krishn404 - <span id="colored-text">Student/Artist/Beginner Web Developer</span>.
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="display: none;">
+        <h1>Contact</h1>
+        <p>Contact information goes here.
+		</p>
+    </section>
+
+    <section id="information" style="display: none;">
+        <h1>Information</h1>
+        <p>Some informative content.</p>
+    </section>
+
+    <section id="guide" style="display: none;">
+        <h1>Guide</h1>
+        <p>Guidelines and instructions.</p>
+    </section>
+
+    <div class="container is-full-width" id="footer" align="center">
+        <h1 class="subtitle is-6">&copy; Copyright 2023 krishn404</h1>
+    </div>
+
+</body>
+</html>
